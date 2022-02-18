@@ -1,0 +1,302 @@
+<!-- <div class="publish-date d-flex marginB1rem">
+    <span class="po-date text-center font-weight-bold blackText ">Uploaded on {{profileData[0].last_published_at | date:'dd MMM yyyy'}}</span>
+</div>
+<div class="user-img marginB1rem d-flex d-align-center flex-column">
+    <img src="assets/img/Screenshot-PM@2x.jpg" class="bRadius100 marginB1rem" width="124px" height="123px">
+    <div class="userDetail d-flex d-align-center flex-column">
+        <span class="user-title font-weight-bold font18">Test Jain</span>
+        <span class="user-designation blackText"><a href="#">{{ profileData[0].user_handle }}</a></span>
+        <span class="user-designation blackText">UG - Final Year Student</span>
+        <span class="user-designation blackText">MMCOA, Pune University</span>
+    </div>
+</div> -->
+<!-- 
+<div *ngIf="">
+
+<div class="d-flex user-details-info justify-content-center flex-column d-align-center paddingLR2rem">
+    <div class="publish-date d-flex marginB12">
+        <span class="po-date text-center font-weight-bold blackText ">Uploaded on {{Uploaded |  date}}</span>
+    </div>
+    <div class="user-img marginB24 d-flex d-align-center flex-column">
+        <img src="assets/img/Screenshot-PM@2x.jpg" class="bRadius100" width="124px" height="123px">
+        <div class="userDetail d-flex d-align-center flex-column">
+            <span class="user-title font-weight-bold font18 grey marginB4">Divya Jain</span>
+            <span class="user-designation blackText"><a href="#" class="blackText">{{userHandle}}</a></span>
+            <span class="user-designation blackText">UG - Final Year Student</span>
+            <span class="user-designation blackText">MMCOA, Pune University</span>
+        </div>
+    </div> 
+</div>
+
+</div> -->
+
+<section class="profile-desrc-wrapper fold-wrapper paddingB2rem">
+  <div class="Row">
+    <div class="row margin0 justify-content-between">
+      <div
+        class="
+          col-lg-8 col-sm-12 col-md-8
+          order-sm-2 order-md-1 order-lg-1 order-xl-1
+        "
+      >
+        <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+        <p>{{ cover_description }}</p>
+        <p class="grey font-weight-bold marginB12">
+          22 years old | UG - {{ ug_pg }}
+        </p>
+        <p class="grey font-weight-bold marginB12">
+          {{ college_name }} | {{ university }}
+        </p>
+        <p class="grey font-weight-bold marginB1rem">
+          Architecture Design l Mathematics | 3D Rendering and Design
+        </p>
+
+        <div class="social-media-wrapper d-flex">
+          <div
+            class="
+              d-flex
+              align-items-center
+              justify-content-between
+              social-connect
+            "
+          >
+            <p class="mb-0 grey">Social Connect</p>
+            <div class="social-icon-wrapper d-flex">
+              <a href="#" class="greyBG rounded-circle social-icon">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="#" class="greyBG rounded-circle social-icon">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a href="#" class="greyBG rounded-circle social-icon">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a
+                href="#"
+                class="
+                  greyBG
+                  rounded-circle
+                  social-icon
+                  d-sm-block d-md-none d-lg-none d-xl-none
+                "
+              >
+                <i class="fa fa-share-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="
+              d-flex
+              social-connect
+              d-sm-none d-md-block d-lg-block d-xl-block
+            "
+          >
+            <div class="d-flex align-items-center">
+              <p class="mb-0 marginR1rem grey">Share Profile</p>
+              <div class="social-icon-wrapper">
+                <a href="#" class="greyBG rounded-circle social-icon">
+                  <i class="fa fa-share-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div
+            class="
+              col-xl-3
+              col-lg-5
+              col-md-6
+              col-xl-none
+              col-lg-none
+              col-md-none
+              col-sm-block
+            "
+          >
+            <div class="d-flex marginT16">
+              <div
+                class="
+                  project-btn-wrapper
+                  d-flex d-align-center
+                  flex-column
+                  width100
+                "
+              >
+                <button
+                  class="
+                    paddingTB1rem
+                    marginB10
+                    btn
+                    greyBG
+                    whiteTestColor
+                    bRadius25
+                    font15
+                    btn-block
+                  "
+                >
+                  Send Message
+                </button>
+                <button
+                  class="
+                    paddingTB1rem
+                    marginB12
+                    mt-0
+                    btn
+                    bg-primary-clr
+                    whiteTestColor
+                    font15
+                    bRadius25
+                    btn-block
+                  "
+                >
+                  Follow on Art n Skills
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="
+            col-xl-3
+            col-lg-5
+            col-md-6
+            col-xl-none
+            col-lg-none
+            col-md-none
+            col-sm-block
+          "
+        >
+          <div class="d-flex person-info">
+            <div class="d-flex flex-column">
+              <div class="profile-pic-wrapper">
+                <img
+                  src="assets/img/profiles/MaskGroup78@2x.png"
+                  class="rounded-circle"
+                  width="100px"
+                  height="100px"
+                  *ngIf="profile_pic == null"
+                />
+                <img
+                  src="{{profile_pic}}"
+                  class="rounded-circle"
+                  width="100px"
+                  height="100px"
+                  *ngIf="profile_pic != null"
+                />
+              </div>
+              <p class="grey">
+                Followers - <span class="font-weight-bold">{{ follower_count }}</span>
+              </p>
+            </div>
+
+            <div class="paddingLR15 d-flex flex-column">
+              <div class="d-flex direction-col marginR12">
+                <h3 class="heading text-white mb-0 font-weight-bold">
+                  Divya Jain
+                </h3>
+                <div class="card-id">
+                  <a href="#" class="whiteTestColor">@amarshastri</a>
+                </div>
+              </div>
+              <div class="portpholio-achive-img marginT10">
+                <img
+                  src="assets/img/icon/Group684@2x.png"
+                  class="rounded-circle marginR12"
+                  width="40px"
+                  height="40px"
+                  *ngIf="profile_pic == null"
+                />
+                <img
+                  src="{{profile_pic}}"
+                  class="rounded-circle"
+                  width="40px"
+                  height="40px"
+                  *ngIf="profile_pic != null"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="
+          col-lg-3 col-sm-12 col-md-4
+          order-sm-1 order-md-2 order-lg-2 order-xl-2
+          col-sm-none col-lg-block col-md-block
+        "
+      >
+        <div
+          class="
+            person-info
+            d-flex
+            justify-content-center
+            flex-column
+            align-items-center
+          "
+        >
+          <div class="profile-pic-wrapper">
+            <img
+              src="assets/img/profiles/MaskGroup78@2x.png"
+              class="rounded-circle"
+              width="170px"
+              height="170px"
+              *ngIf="profile_pic == null"
+            />
+            <img
+              src="{{profile_pic}}"
+              class="rounded-circle"
+              width="170px"
+              height="170px"
+              *ngIf="profile_pic != null"
+            />
+          </div>
+          <p class="grey">
+            Followers - <span class="font-weight-bold">{{ follower_count }}</span>
+          </p>
+          <div
+            class="
+              project-btn-wrapper
+              d-flex d-align-center
+              flex-column
+              width100
+            "
+          >
+            <button
+              class="
+                paddingTB1rem
+                marginB12
+                btn
+                greyBG
+                whiteTestColor
+                bRadius25
+                font15
+                btn-block
+              "
+            >
+              Send Message
+            </button>
+            <button
+              class="
+                paddingTB1rem
+                marginB12
+                btn
+                bg-primary-clr
+                whiteTestColor
+                font15
+                bRadius25
+                btn-block
+              "
+            >
+              Follow on Art n Skills
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

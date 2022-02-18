@@ -1,0 +1,58 @@
+<div class="row width100 marginLR0 marginB2rem">
+  <div class="col-md-12">
+    <div class="d-flex marginB1rem">
+      <h2 class="fold-heading text-lg-left text-sm-center">
+        Spotlight Projects
+        <!-- {{'home.spotlight_project' | translate}} -->
+      </h2>
+    </div>
+  </div>
+
+  <!-- Without Carousal -->
+  <div class="col-lg-3 col-xl-3 col-md-6 col-sm-6" *ngFor="let item of recevieData  | slice:0:4; let i=index;">
+    <div class="card-wrapper" >
+      <div class="card-inner">
+        <div class="card-img" (click)="projectDetails(item.detail_url)">
+          <img src="{{ item.images[0].download_url }}" width="100%" class="" />
+          <div class="card-id">
+            <p>
+              <a href="#">{{ item.user_handle }}</a>
+            </p>
+          </div>
+        </div>
+        <div class="card-text-wrapper marginT10">
+          <div class="d-flex justify-content-between align-items-center">
+            <h4 class="card-title">
+              <a href="#">{{ item.title }}</a>
+            </h4>
+            <div class="card-save-icon">
+              <a href="#">
+                <img src="assets/img/icon/MostCommented.png" width="20" />
+              </a>
+              <a href="#">
+                <img src="assets/img/icon/JuryChoice.png" width="20" />
+              </a>
+
+              <a href="##" class="bookmark">
+                <img src="assets/img/icon/SaveForLater.png" class="bookmarkImg" width="20" />
+              </a>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <app-spotlight-review [passrating]="item.ratings" [passlike]="item.like_count">
+            </app-spotlight-review>
+
+            <div>
+              <button class="img-back-btn lightGreyBG">
+                <a href="#">Design</a>
+              </button>
+              <button class="img-back-btn greenBG">
+                <a href="#">Recreation</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

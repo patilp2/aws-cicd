@@ -1,0 +1,90 @@
+<main id="main">
+    <section class="fold-wrapper fold-1 d-flex login-page">
+       
+     </section>
+
+    <section>
+        <div class="container login-page-main-wrapper">
+        <div class="row justify-content-center paddingLR15 login-fold">
+            <div class="col-md-10 col-xl-9 col-lg-9 col-sm-12">
+                <div class="user-login-wrapper whiteBG borderNone paddingLR3rem bRadius10 d-flex flex-column align-items-center">
+                    <div class="select-user-wrapper w-100 flex-column">
+                        <div class="w-100">
+                            <h3 class="heading marginB24 text-center font-weight-bold grey">Select User Type</h3>
+                            <span class="text-center otp-note grey d-block">We detected you are new to Art n Skills.<br> Please create your profile to continue.</span>
+                        </div>
+
+                        <form #Role="ngForm">
+
+
+                            <div class="u-select-type-wrapper mx-auto">
+                                <div class="row">
+                                    <div class="col-lg-3 col-sm-6">
+                                        <label>
+                                            <input id="student" type="radio" value="Student" name="type" [(ngModel)]="type" required>
+
+                                            <div class="selectcheck u-type-img d-flex justify-content-center align-items-center marginB1rem">
+                                                <img src="assets/img/education@2x.png" width="64">
+                                            </div>
+                                            <div class="u-type-name d-flex justify-content-center">
+                                                <p class="grey font18 text-center">Student</p>
+                                            </div>
+                                        </label>
+                                    </div>
+    
+                                    <div class="col-lg-3 col-sm-6">
+                                        <label>
+                                            <input id="architect" type="radio" value="Architect" name="type" [(ngModel)]="type">
+                                            <div class="selectcheck u-type-img d-flex justify-content-center align-items-center marginB1rem">
+                                                <img src="assets/img/architect@2x.png" width="64">
+                                            </div>
+                                            <div class="u-type-name d-flex justify-content-center">
+                                                <p class="grey font18 text-center">Architect/ Professional</p>
+                                            </div>
+                                        </label>
+                                    </div>
+    
+                                    <div class="col-lg-3 col-sm-6">
+                                        <label>
+                                            <input id="institute" type="radio" value="Institute" name="type" [(ngModel)]="type">
+                                            <div class="selectcheck u-type-img d-flex justify-content-center align-items-center marginB1rem">
+                                                <img src="assets/img/college@2x.png" width="64">
+                                            </div>
+                                            <div class="u-type-name d-flex justify-content-center">
+                                                <p class="grey font18 text-center">Institute</p>
+                                            </div>
+                                        </label>
+                                    </div>
+    
+                                    <div class="col-lg-3 col-sm-6">
+                                        <label>
+                                            <input id="general" type="radio" value="General" name="type" [(ngModel)]="type" >
+
+                                            <div class="selectcheck u-type-img d-flex justify-content-center align-items-center marginB1rem">
+                                                <img src="assets/img/group@2x.png" width="64">
+                                            </div>
+                                            <div class="u-type-name d-flex justify-content-center">
+                                                <p class="grey font18 text-center">General</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <div class="OTP-submmit-wrapper text-center mb-2">
+                                    <button type="submit" class="btn btn-sm bg-primary-clr" (click)="userRole()"  [disabled]="!Role.valid"
+                                    >Proceed</button>
+                                </div>
+                            </div>
+
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    </section>

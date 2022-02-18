@@ -1,0 +1,46 @@
+.paddingTB4rem {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.Row{
+    max-width: 1350px;
+    margin: 0 auto;
+    zoom: 1;
+}
+.fold-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+label, a {
+    color: #4D5A6D;
+}
+.lightGreyBG{
+    background-color: #C8CDD3;
+}
+button.lightGreyBG:hover{
+    background-color: #989ea5;
+}
+.bRadius25 {
+    border-radius: 25px;
+}
+.paddingTB1rem {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.bg-primary-clr {
+    background-color: #E54C38;
+}
+.card {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.defaultTextColor {
+    color: #22262a;
+}
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+    .portpholio-page .portpholio-page-fold-1 {
+        padding: 2rem 0px;
+    }
+}

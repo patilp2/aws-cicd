@@ -1,0 +1,22 @@
+<ul class="navbar-nav mt-2 mt-lg-0" id="menuFirst">
+  <li class="nav-item menu-item">
+    <a class="nav-link" routerLink="/explore-project">Explore Projects</a>
+  </li>
+  <li class="nav-item menu-item">
+    <a class="nav-link" href="#">Institutes</a>
+  </li>
+  <li class="nav-item menu-item">
+    <a class="nav-link" href="#">Opportunities</a>
+  </li>
+  <li class="nav-item menu-item">
+    <a class="nav-link" routerLink="/talk-view">ArtnSkills Talk</a>
+  </li>
+  <li class="nav-item menu-item" *ngIf="!tokenFlag" >
+    <a class="nav-link" routerLink="/login"><span class="menu-button">Login / Register </span> </a>
+  </li>
+  <li class="nav-item menu-item" *ngIf="tokenFlag">
+    <a class="nav-link" routerLink="/profile-details">Profile</a>
+  </li>
+
+
+</ul>

@@ -1,0 +1,113 @@
+
+<section class="fold-wrapper fold-1 d-flex login-page"></section>
+
+<section>
+  <div class="container">
+    <div class="row justify-content-center paddingLR15 login-fold">
+      <div class="col-md-10 col-xl-9 col-lg-9 col-sm-12">
+        <div
+          class="
+            user-login-wrapper
+            whiteBG
+            borderNone
+            paddingLR3rem
+            bRadius10
+            d-flex
+            flex-column
+            align-items-center
+          "
+        >
+          <div class="login-form-wrapper w-100">
+            <h3 class="heading marginB2rem text-center font-weight-bold grey">
+              Login/Register Here!
+            </h3>
+            <div class="user-login-form w-100">
+              <form #Login="ngForm">
+                <div class="input-group marginB2rem">
+                    <!-- <div class="input-group-append user-icon">
+                        <span class="input-group-text borderNone bgColorNone"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    </div> -->
+                  <input
+                    type="text"
+                    name="email_phone"
+                    [(ngModel)]="email_phone"
+                    class="form-control input_user form-control-lg greyBorder"
+                    placeholder="Email/Mobile"
+                    required
+                    #username="ngModel"
+                    pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|(^[0-9]{10})+$"
+                  />
+
+                  <div class="input-group-append login-btn">
+                    <button
+                      type="submit"
+                      id="signUp"
+                      class="
+                        btn
+                        input-group-text
+                        greyBG
+                        whiteTestColor
+                        greyBorder
+                      "
+                      [disabled]="!Login.valid"
+                      (click)="login()"
+                    >
+                      <i
+                        class="fa fa-check whiteTestColor"
+                        aria-hidden="true"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="mb-3 input-group errorMessage alert alert-danger"
+                  *ngIf="username.errors && username.dirty"
+                >
+                  <div [hidden]="!username.errors.required">
+                    Username is required
+                  </div>
+                  <div [hidden]="!username.errors.pattern">
+                    Username not valid
+                  </div>
+                </div>
+              </form>
+
+              <div id="optNote" class="text-center otp-note grey" *ngIf="otpMessage">
+                We will send an OTP the email address/mobile number.
+              </div>
+
+              <div class="OTP-wrapper mt-2" *ngIf="otpflag">
+                <span class="text-center grey d-block marginB24"
+                  >Enter OTP</span
+                >
+                <form action="" class="mb-4 text-center">
+                  <ng-otp-input
+                    #ngOtpInput
+                    (onInputChange)="onOtpChange($event)"
+                    *ngIf="showOtpComponent"
+                    [config]="config"
+                  ></ng-otp-input>
+                </form>
+
+                <span class="text-center grey d-block marginB2rem"
+                  >OTP is valid for {{ countDownMobile | async | formatTime }} mins</span
+                >
+                <div class="OTP-submmit-wrapper text-center marginB2rem">
+                  <button class="btn btn-sm bg-primary-clr whiteTestColor whiteTesthover" id="proceed"
+                  (click)="optVerify()" [disabled]="otp == undefined || otp == ''">Login
+                    <!-- <a class="whiteTestColor whiteTesthover"></a> -->
+                  </button>
+                </div>
+                <span class="text-center grey d-block mb-2"
+                  >OTP not received?
+                  <button [ngClass]=" !resendOTPFlag ? 'grey' : 'primary-clr'" (click)="login()">Resend</button></span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<router-outlet></router-outlet>
+<div class="feedback">
+  <div class="sticky-wrapper">
+    <a (click)="checkLogin()" class="add-project-btn">
+      <span class="material-icons">add</span>
+    </a>
+    <p class="pro-text">Create Project</p>
+  </div>
+</div>
+
+<app-footer></app-footer>
+<div *ngIf="connectionStatus === 'online'" class="online">
+  <span>{{connectionStatusMessage}}</span>
+</div>
+<div *ngIf="connectionStatus === 'offline'" class="offline-text">
+  <span>{{connectionStatusMessage}}</span>
+</div>

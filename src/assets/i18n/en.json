@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "explore_project": "Explore Project",
+    "institutes": "Institutes",
+    "opportunities": "Opportunities",
+    "artnskills_talk": "ArtnSkills Talk"
+  },
+  "home": {
+    "spotlight_project": "Spotlight Projects",
+    "recently_upload_project": "Recently Uploaded Projects"
+  }
+}

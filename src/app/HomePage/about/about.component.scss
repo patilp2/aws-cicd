@@ -1,0 +1,89 @@
+.paddingLR7rem {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+.paddingTB4rem {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.marginB2rem {
+    margin-bottom: 2rem;
+}
+h2 {
+    margin-top: 0.27em;
+}
+.btn {
+    border: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .yellow-fold {
+        min-height: 450px;
+        background-position: center left;
+    }
+    .yellow-fold-text-wrapper .paddingTB4rem {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .yellow-fold-text-wrapper .white-patch{
+        margin-top:-5rem;
+    }
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 425px) {
+    .container{
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .fold-1{
+        min-height: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-image: url(../../../assets/img/backgrounds/Group-1343.jpg);
+    }
+    .fold-1 h2.heading{
+        font-size: 24px;
+    }
+    .justify-content-sm-center{
+        justify-content: center !important;
+    }
+
+    .fold-1 h3.sub-heading{
+        font-size: 16px;
+    }
+    .fold-1 .primary-btn{
+        padding: 9px 18px;
+    }
+    .fold-3{
+            padding-bottom: 2rem !important;
+    }
+    .img-fold .ad-img{
+        margin-top: -1rem;
+    }
+    .paddingLR7rem{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .white-patch{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .search-box-wrapper .has-search .form-control{
+        display: inline-block;
+        width: auto;
+    }
+    .yellow-fold {
+        min-height: 250px;
+        background-position: center left;
+    }
+    .yellow-fold-text-wrapper .paddingTB4rem {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .yellow-fold-text-wrapper .white-patch{
+        margin-top:-3rem;
+    }
+}

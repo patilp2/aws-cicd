@@ -1,0 +1,133 @@
+
+        <main id="main" class="profile-self-view-messages">
+            <div class="breadcrumbs fold-wrapper Row greyBG">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb rounded-0 d-flex align-items-center greyBG p-0 m-0">
+                        <img src="assets/img/icon/arrow.png" height="24px" width="24px;">
+                        <li class="breadcrumb-item active text-white paddingLR15" aria-current="page">Messages</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="container-fluid fold-wrapper">
+                <div class="row Row paddingTB4rem paddingT32 pt-0">
+                    <div class="col-lg-3 p-0 bg-white border-color chat-list-hide">
+                        <div class="form-group has-search left-search-section mb-0 px-2 py-3">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control search-input" placeholder="Search People">
+                        </div>
+                        <div class="tab">
+                            <button class="tablinks font15 grey click-btn" onclick="openCity(event, 'London')"
+                                id="defaultOpen">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <img class="mr-2" src="assets/img/profiles/user.png" width="54px" height="54px">
+                                        <span> Swapnil Tiwari </span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="mr-2"> 11:00 am </span>
+                                        <span class="badge badge-pill badge-dark">5</span>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button class="tablinks font15 grey" onclick="openCity(event, 'Paris')">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <img class="mr-2" src="assets/img/profiles/user.png" width="54px" height="54px">
+                                        <span> @harshshah </span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span> Yesterday </span>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <button class="tablinks font15 grey" onclick="openCity(event, 'Tokyo')">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <img class="mr-2" src="assets/img/profiles/user.png" width="54px" height="54px">
+                                        <span> @meerarajput </span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span> 10/10/2021 </span>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 p-0 chat-section-hide">
+                        <div id="London" class="tabcontent">
+                            <div class="right-msg-section">
+                                <div class="d-flex align-items-center justify-content-between chatblueBG py-3 px-4">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <i class="fa fa-arrow-left font20 chat-back-btn cursor-pointer"></i>
+                                        <img class="mx-2" src="assets/img/profiles/user.png" width="54px" height="54px">
+                                        <span class="grey font-weight-bold"> Swapnil Tiwari </span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+
+                                <div class="m-4">
+                                    <div class="yesterdayBG px-3 py-3 rounded d-inline-block">
+                                        <span class="font14"> YESTERDAY </span>
+                                    </div>
+                                </div>
+
+                                <div class="m-4">
+                                    <div class="d-sm-flex d-block align-items-end">
+                                        <div class="chatblueBG px-3 py-3 font15 width70 rounded">
+                                            <div class="d-flex font15 align-items-center">
+                                                <div>
+                                                    Hi Divya,
+                                                </div>
+
+                                                <div class="ml-3 font12">
+                                                    10:45 am
+                                                </div>
+                                            </div>
+
+                                            <p class="mb-0">I am Swapnil Tiwari from D.Y Patil College, studying in my
+                                                first year. I liked your work and get inspire, need your guidance in one
+                                                of my project. Could you please help me? </p>
+                                        </div>
+
+                                        <div class="font14 opacity-50 ml-2 grey"> 01:00 am </div>
+                                    </div>
+                                </div>
+
+                                <div class="m-4">
+                                    <div class="d-sm-flex d-block align-items-end">
+                                        <div class="bg-white px-3 py-3 font15 width90 rounded">
+                                            <p class="mb-0">Hello Swapnil. <br> Nice to hear you. I would like to help
+                                                you, but I am quite busy with submission, when get free will message
+                                                you. </p>
+                                        </div>
+                                        <div class="font14 opacity-50 ml-2 grey"> 02:00 am </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="send-msg-section mx-0 p-3 rounded d-flex mx-sm-4">
+                                <textarea id="textarea" rows="2" class="width100 p-3 mr-3"
+                                    placeholder="Type to reply..."></textarea>
+
+                                <div class="d-flex flex-column justify-content-around align-items-center">
+                                    <button class="border-0 bg-transparent"> <i
+                                            class="fa fa-paper-plane font20 greyBG text-white p-3 bRadius50"></i>
+                                    </button>
+                                    <!-- <button class="border-0 bg-transparent"> <i class="fa fa-refresh font20 bg-white p-3 bRadius50 grey"></i> </button> -->
+                                </div>
+                            </div>
+                        </div>
+
+                      
+                    </div>
+                </div>
+            </div>
+
+          
+           
+       

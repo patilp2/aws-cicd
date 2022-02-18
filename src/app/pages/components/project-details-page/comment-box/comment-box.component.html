@@ -1,0 +1,13 @@
+<div class="project-comment-wrapper marginB1rem d-flex flex-column">
+
+    <span class="po-date marginB15 grey font-weight-bold">Comments</span>
+    <form>
+        <div class="tags-btn-wrapper marginB1rem">
+            <textarea class="form-control marginB1rem" id="projectComment" name="comment" [(ngModel)]="comment" rows="6" required></textarea>
+            <button  class="cmnt-btn bRadius25 btn whiteBG greyBorder grey paddingLR1rem">Cancel</button>
+            <button type="submit" class="cmnt-btn bRadius25 btn greyBG whiteTestColor paddingLR15" (click)="addComment()">Add</button>
+        </div>
+    </form>
+    <app-comment-view [commentData]="commentData"></app-comment-view>
+
+</div>

@@ -1,0 +1,25 @@
+.fold-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.Row {
+    max-width: 1350px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+.image-mask { 
+
+    .ytp-chrome-top, .ytp-chrome-bottom {
+        display: none !important;
+    }
+
+    .test-mask{
+        background: red;
+    width: 91%;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    }
+}

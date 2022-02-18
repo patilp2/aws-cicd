@@ -1,0 +1,13 @@
+<div class="project-tags-wrapper text-sm-center  marginB2rem d-flex d-align-center flex-column">
+
+    <div class="tags-btn-wrapper">
+        <button *ngFor='let tags of tagsData'
+            [ngClass]="[tags == 'Recreation' ? 'tag-btn btn lightBlue whiteTestColor':'', tags == 'Design' ? 'tag-btn btn greenBG whiteTestColor':'']">{{
+            tags }}</button>
+        <!-- <button class="tag-btn btn lightBlue whiteTestColor">Residential</button>
+        <button class="tag-btn btn greenBG whiteTestColor">Urban Design</button>
+        <button class="tag-btn btn lightGreyBG">Eco Friendly</button>
+        <button class="tag-btn btn lightGreyBG">Clean Design</button> -->
+    </div>
+
+</div>

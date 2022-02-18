@@ -1,0 +1,29 @@
+ <div class="client-testimonials fold-wrapper paddingTB5rem paddingB3rem mt-5">
+    <div class="Row">
+        <div class="row" *ngIf="videoFlag">
+            <div *ngFor="let item of videos" class="col-lg-3 col-xl-3 col-md-6 col-sm-6">
+                <div class="testimonial-column title-clumn marginB2rem">
+                    <div class="testi-video text-center" (click)="playVideo(item.snippet.resourceId.videoId)"> 
+                        <div class="bRadius10 image-mask" height="150">
+                            <youtube-player [videoId]="vid" suggestedQuality="highres" [playerVars]=" imageFlag ==true && item.snippet.resourceId.videoId == vid ? {controls: 1, mute: 0, autoplay: 1} :''">
+                            </youtube-player>
+                        </div>
+                        <div class="test-mask"  [ngClass]="imageFlag ==true && item.snippet.resourceId.videoId == vid ? 'd-none':'' "   style="background: url({{item.snippet.thumbnails.medium.url}});">
+                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="testimonials-centent marginT16 text-center">
+                        <div class="testimonial-user-name">
+                            <p class="marginB10"><a href="#" class="primary-clr">{{item.snippet.title.slice(0, 30)}}</a></p>
+                        </div>
+                        <div class="user-text">
+                            <p class="font18 grey" *ngIf="item.snippet.description !=''">
+                                {{item.snippet.description.slice(0, 60)}} ....</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,12 @@
+{
+    "menu": {
+        "explore_project": "परियोजना का अन्वेषण करें",
+        "institutes": "संस्थान",
+        "opportunities": "अवसरों",
+        "artnskills_talk": "कला कौशल वार्ता"
+    },
+    "home": {
+        "spotlight_project": "स्पॉटलाइट प्रोजेक्ट्स",
+        "recently_upload_project": "हाल ही में अपलोड किए गए प्रोजेक्ट "
+    }
+}

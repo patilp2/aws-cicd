@@ -1,0 +1,13 @@
+<carousel [noWrap]="noWrapSlides">
+  <slide *ngFor="let images of sliderData; let index=index">
+    <img src="{{ images.image.meta.download_url }}" alt="image slide" style="display: block; width: 100%;">
+
+    <div class="carousel-caption d-md-block">
+      <h1 data-animation="animated bounceInRight">Curate {{index}} </h1>
+      <p></p>
+
+    </div>
+  </slide>
+</carousel>
+
+

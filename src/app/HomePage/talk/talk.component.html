@@ -1,0 +1,55 @@
+<div class="client-testimonials fold-wrapper paddingTB5rem paddingB3rem">
+    <div class="Row">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3 col-md-6 col-sm-6">
+                <div class="testimonial-column title-clumn marginB2rem">
+                    <div class="testi-img text-center">
+                        <img src="assets/img/talk2.png" width="180" height="200">
+                    </div>
+                    <div class="testimonials-centent marginT16 text-center">
+                        <div class="user-text">
+                            <p class="font18 grey">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                                nonumy</p>
+                        </div>
+                        <div class="testimonial-page-link d-none d-lg-block">
+                            <a href="#" class="primary-clr" routerLink="talk-view">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngFor="let item of videos | slice:0:3; let i=index" class="col-lg-3 col-xl-3 col-md-6 col-sm-6">
+                <div class="testimonial-column title-clumn marginB2rem">
+                    <div class="testi-video text-center" (click)="playVideo(item.snippet.resourceId.videoId)"> 
+                        <div class="bRadius10 image-mask" height="150">
+                            <youtube-player [videoId]="vid" suggestedQuality="highres" [playerVars]=" imageFlag ==true && item.snippet.resourceId.videoId == vid ? {autoplay: 1,controls: 1,modestbranding: 1, rel: 0,showInfo: 0} :''">
+                            </youtube-player>
+                        </div>
+                        <div class="test-mask"  [ngClass]="imageFlag ==true && item.snippet.resourceId.videoId == vid ? 'd-none':'' "   style="background: url({{item.snippet.thumbnails.medium.url}});">
+                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="testimonials-centent marginT16 text-center">
+                        <div class="testimonial-user-name">
+                            <p class="marginB10"><a href="#" class="primary-clr">{{item.snippet.title.slice(0, 30)}}</a></p>
+                        </div>
+                        <div class="user-text">
+                            <p class="font18 grey" *ngIf="item.snippet.description !=''">
+                                {{item.snippet.description.slice(0, 60)}} ....</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12">
+                <div class="testimonials-centent marginT16 text-center">
+                    <div class="testimonial-page-link d-block d-lg-none">
+                        <a href="#" class="primary-clr">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

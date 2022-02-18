@@ -1,0 +1,69 @@
+.card {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.card-title {
+    margin-bottom: 0.3rem;
+}
+label, a {
+    color: #4D5A6D;
+}
+.margin0 {
+    margin: 0px;
+}
+.marginB1rem {
+    margin-bottom: 1rem;
+}
+h2 {
+    margin-top: 0.27em;
+    margin-bottom: 0.27em;
+}
+.card-title a {
+    font-size: 17px;
+    color: #4D5A6D;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+.card-wrapper .card-1 {
+    background-image: url('../../../assets/img/backgrounds/Mask-Group-22.png');
+    min-height: 304px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.card-1 .heading-wrapper h2.fold-heading {
+    color: #4D5A6D;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+    font-size: 32px;
+}
+.card-1 .heading-wrapper {
+    position: absolute;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+}
+.spotlight .card-wrapper img {
+    border-radius: 5px;
+}
+button.img-back-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 0px 6px;
+    font-size: 14px;
+}
+
+.marginB2rem {
+    margin-bottom: 2rem;
+}
+.marginLR0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+button.img-back-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 0px 6px;
+    font-size: 14px;
+}

@@ -1,0 +1,224 @@
+    <!-- <div class="product-gallery-wrapper shadow whiteBG bRadius10 marginTB2rem padding paddingLR3rem paddingTB3rem">
+        <div class="row ">
+            <div class="col-md-12 d-flex flex-column ">
+
+                <app-project-image-details [user_handle]="user_handle"></app-project-image-details>
+
+                <app-project-review></app-project-review>
+
+                <app-comment-box [commentData]="passData"></app-comment-box>
+
+            </div>
+
+        </div>
+    </div> -->
+
+
+    <div class="product-gallery-wrapper shadow whiteBG borderNone bRadius10 marginTB1rem padding paddingLR2rem paddingTB2rem">
+        <div class="row ">
+            <div class="col-md-12 d-flex flex-column ">
+              
+                  <div class="gallery-item-wrapper item-1 marginB1rem">
+                      <a href="assets/img/Group1893.png" data-lightbox="photos">
+                          <img src="assets/img/Group1893.png" width="100%" height="" alt="" class="gallery-item img-fluid">
+                          <div class="card-id">
+                            <p><a href="#">@amarshastri </a></p> 
+                          </div>
+                      </a>
+                  </div>
+              
+
+
+              <div class="gallery-item-wrapper item-2">
+                  <a href="assets/img/watermark-gray.png" data-lightbox="photos">
+                      <img src="assets/img/watermark-gray.png" width="100%" height="" alt="" class="gallery-item">
+                      <div class="card-id">
+                        <p><a href="#">@amarshastri </a></p> 
+                      </div>
+                      <div class="img-desc">
+                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est.</p>
+                      </div>
+                  </a>   
+              </div>
+
+              <div class="project-img-load marginTB1rem">
+                <button class="bRadius50 w-100 paddingTB1rem greyBorder grey bgColorNone">Load More</button>
+              </div>
+
+
+              <div class="project-sharing-wrapper marginT16 marginB2rem d-sm-flex d-flex justify-content-sm-between paddingLR15">
+                  <div class="d-flex pr-edit-wrapper widthsm70 justify-content-between justify-content-md-between justify-content-sm-between d-align-center">
+                      <div class="pr-edit">
+                        <a href="#">
+                          <img src="assets/img/icon/penoutline@2x.png" width="24">
+                        </a>
+                      </div>
+                      <div class="pr-share">
+                        <a href="#">
+                          <img src="assets/img/icon/share@2xoutline.png" width="24">
+                        </a>
+                      </div>
+                  </div>
+                  <div class="d-flex width40 justify-content-end d-align-center">
+                      <!-- <div class="project-enquire d-none d-lg-block d-xl-block d-md-block marginR1rem">
+                          <a class="pr-enquire-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"><span class="">Enquire</span> </a>
+                      </div>
+                      <div class="project-download d-none d-lg-block d-xl-block d-md-block margin">
+                          <a class="pr-download-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"><span class="">Download</span> </a>
+                      </div> -->
+                      <app-button></app-button>
+                      <!-- <button class="pr-enquire-btn btn d-none d-lg-block d-xl-block d-md-block greyBG whiteTestColor bRadius25 font15  width40 marginR10">Enquire</button>
+                      <button class="pr-download-btn btn project-download d-none d-lg-block d-xl-block d-md-block bg-primary-clr whiteTestColor font15 bRadius25 hovergreytext width40">Download</button> -->
+                      
+                      <div class="pr-more d-none d-lg-block d-xl-block d-md-block">
+                        <div class="dropdown dropleft">
+                          <a href="#" class="dropdown-toggle" type="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="lightGreytext material-icons ">more_vert</span>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuMore">
+                            <a class="dropdown-item" href="#">Flag Project</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="d-block width70 d-lg-none d-xl-none d-md-none d-flex align-items-center">
+                      <!-- <div class="project-enquire marginR1rem">
+                          <a class="pr-enquire-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"><span class="">Enquire</span> </a>
+                      </div>
+                      <div class="project-download">
+                          <a class="pr-download-btn" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"><span class="">Download</span> </a></a>
+                      </div> -->
+                      <button class="pr-enquire-btn btn greyBG whiteTestColor bRadius25 font15  width40 marginR10">Enquire</button>
+                      <button class="pr-download-btn btn bg-primary-clr whiteTestColor font15 bRadius25 hovergreytext width40">Download</button>
+                      <div class="pr-more">
+                        <div class="dropdown dropleft">
+                          <a href="#" class="dropdown-toggle" type="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="lightGreytext material-icons ">more_vert</span>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuMore">
+                            <a class="dropdown-item" href="#">Flag Project</a>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              
+
+              <div class="project-note-wrapper d-flex flex-column">
+                <span class="po-date marginB15 grey font-weight-bold">Jury Notes</span>
+                <div class="comment-details-wrapper">
+                  <div class="row marginB1rem">
+                      <div class="col-lg-2 col-xl-1 col-md-2 col-sm-2 d-flex d-align-center paddingLR15 marginB1rem">
+                          <div class="profile-img">
+                              <img src="assets/img/profiles/2.png" class="bRadius100 marginB1rem" width="62px" height="62px">
+                          </div>
+                          <div class="d-flex justify-content-lg-between d-block d-sm-block d-lg-none d-md-none flex-lg-row flex-sm-column">
+                              <div class="card-id">
+                                  <a href="#" class="font14 defaultTextColor">Ar. Ashwin T.</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-10 col-md-10">
+                          <div class="comment-details d-flex flex-column paddingLR10I">
+                              <div class="d-none d-lg-block d-md-block d-xl-block d-sm-none">
+                                  <div class="d-flex justify-content-between">
+                                      <div class="card-id">
+                                          <a href="#" class="font14 defaultTextColor">Ar. Ashwin T.</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="comment-desc text-lg-left">
+                                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- <div class="project-comment-wrapper d-flex flex-column">
+                  <span class="po-date marginB15 grey font-weight-bold">Comments</span>
+                  <div class="tags-btn-wrapper marginB1rem">
+                      <textarea class="form-control marginB1rem" id="projectComment" rows="6"></textarea>
+                      
+                      <button  class="cmnt-btn  bRadius25 btn whiteBG greyBorder grey paddingLR1rem marginR10">Cancel</button>
+                      <button type="submit" class="cmnt-btn bRadius25 btn greyBG whiteTestColor paddingLR15">Add</button>
+                  </div>
+                  <div class="comment-details-wrapper marginT16">
+                      <div class="row">
+                          <div class="col-lg-2 col-xl-1 col-md-2 col-sm-2 d-flex d-align-center paddingLR15 marginB1rem">
+                              <div class="profile-img">
+                                  <img src="assets/img/profiles/Screenshot.jpg" class="bRadius100 marginB1rem" width="62px" height="62px">
+                              </div>
+                              <div class="d-flex justify-content-lg-between d-block d-sm-block d-lg-none d-md-none flex-lg-row flex-sm-column">
+                                  <div class="card-id">
+                                      <a href="#" class="font14 defaultTextColor">ProjectsByDiya</a>
+                                  </div>
+                                  <div class="publish-date">
+                                      <a href="#" class="font14 marginR20">22 Jan 2021</a>
+                                      <span class="material-icons grey">outlined_flag</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-10 col-md-10">
+                              <div class="comment-details d-flex flex-column paddingLR10I">
+                                  <div class="d-none d-lg-block d-md-block d-xl-block d-sm-none">
+                                      <div class="d-flex justify-content-between">
+                                          <div class="card-id">
+                                              <a href="#" class="font14 defaultTextColor">ProjectsByDiya</a>
+                                          </div>
+                                          <div class="publish-date">
+                                              <a href="#" class="font14 marginR20">22 Jan 2021</a>
+                                              <span class="material-icons grey">outlined_flag</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="comment-desc text-lg-left">
+                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-2 col-xl-1 col-md-2 col-sm-2 d-flex d-align-center paddingLR15 marginB1rem">
+                              <div class="profile-img">
+                                  <img src="assets/img/Screenshot-PM@2x.jpg" class="bRadius100 marginB1rem" width="62px" height="62px">
+                              </div>
+                              <div class="d-flex justify-content-lg-between d-block d-sm-block d-lg-none d-md-none flex-lg-row flex-sm-column">
+                                  <div class="card-id">
+                                      <a href="#" class="font14 defaultTextColor">Ashna Ahuja</a>
+                                  </div>
+                                  <div class="publish-date">
+                                      <a href="#" class="font14 marginR20">19 Dec, 2020</a>
+                                      <span class="material-icons grey">outlined_flag</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-10 col-md-10">
+                              <div class="comment-details d-flex flex-column paddingLR10I">
+                                  <div class="d-none d-lg-block d-md-block d-xl-block d-sm-none">
+                                      <div class="d-flex justify-content-between ">
+                                          <div class="card-id">
+                                              <a href="#" class="font14 defaultTextColor">Ashna Ahuja</a>
+                                          </div>
+                                          <div class="publish-date ">
+                                              <a href="#" class="font14 marginR20">19 Dec, 2020</a>
+                                              <span class="material-icons grey">outlined_flag</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="comment-desc text-lg-left">
+                                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div> -->
+              <app-comment-box [commentData]="passData"></app-comment-box>
+            </div>
+        </div>
+    </div>

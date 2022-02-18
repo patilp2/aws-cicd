@@ -1,0 +1,74 @@
+<div id="wrapper">
+    <div id="home">
+        <h1>Select a video from your Computer</h1>
+        <p>(Upload your video to add it in Resume)</p>
+        <div *ngIf="!this.videoSelected" class="text-center mt-10">
+            <input #videoFile name="video" type="file" (change)="this.selectVideo($event)" hidden accept="video/*" />
+            <button (click)="this.pickFile()" class="btn btn-primary mt-10">
+                Upload Video
+            </button>
+        </div>
+        <div [hidden]="!this.videoSelected" class="text-center">
+            <video *ngIf="!isUploaded" id="video" controls #video>
+                Your Browser Does not Support it
+            </video>
+        </div>
+        <div *ngIf="videoSelected" class="text-center mt-10">
+            <button *ngIf="!this.isUploaded" class=" btn btn-primary " matTooltip="This will be a Private video"
+                (click)="youtubeSubmit()">Upload to Youtube
+            </button>
+            <input type="file" #videoFile name="video" accept="video/*" (change)="selectVideo($event)" hidden>
+            <button class="btn btn-warning ml-2" (click)="this.pickFile()">
+                <strong>CHANGE</strong>
+            </button>
+
+        </div>
+    </div>
+</div>
+
+
+<div  class="youtubeForm">
+    <div>
+        <div fxLayout="row" fxLayoutGap="30px" *ngIf="this.youtubeService.profile$ | async as profile">
+            <span>Your Connected Account is: <strong>{{profile.getEmail()}}</strong></span>
+            <span class="change" *ngIf="youtubeService.isAuthInit$ | async" (click)="youtubeService.signIn()">change
+                account</span>
+            <hr>
+        </div>
+
+        <form #youtubeForm="ngForm" >
+            <div class="form-group">
+                <label for="vtitle">Video Title</label>
+                <input type="text" name="title" id="" [(ngModel)]="vtitle" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="vtitle">Video Description</label>
+
+                <textarea type="text" name="description" id="" [(ngModel)]="description" class="form-control"
+                    required></textarea>
+            </div>
+            <!-- <div class="form-group">
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="videoStatus" [value]="public"
+                        [(ngModel)]="videoStatus" />
+                    I want maximum views so make it public
+                </label>
+                <label class="form-check-inline">
+                    <input class="form-check-input" type="radio" name="videoStatus" [value]="unlisted"
+                        [(ngModel)]="videoStatus" checked />
+                    Keep my video private
+                </label>
+            </div> -->
+            <div class="text-center">
+                <button class="btn btn-primary" (click)="onSubmit(youtubeForm.value)"
+                    [disabled]="!youtubeForm">Upload</button>
+            </div>
+        </form>
+
+        <div *ngIf="(youtubeService.isAuthInit$ | async) && !(youtubeService.isSignedIn$ | async)"
+            fxLayoutAlign="start center" fxLayout="column">
+            <h2>Please re(Connect) your Youtube Account</h2>
+            <button (click)="this.youtubeService.signIn()" class="btn btn-primary">Sign In</button>
+        </div>
+    </div>
+</div>

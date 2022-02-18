@@ -1,0 +1,21 @@
+<div class="client-testimonials fold-wrapper paddingTB5rem paddingB3rem mt-5">
+    <div class="Row">
+        <div class="row">
+            <div class="col-lg-3 col-xl-3 col-md-6 col-sm-6" *ngFor="let item of videodata">
+                <div class="testimonial-column title-clumn marginB2rem">
+                    <div class="testi-video text-center">
+                        <youtube-player videoId="{{item.snippet.resourceId.videoId}}"></youtube-player>
+                    </div>
+                    <div class="testimonials-centent marginT16 text-center">
+                        <div class="testimonial-user-name">
+                            <p class="marginB10"><a href="#" class="primary-clr">{{item.snippet.title}}</a></p>
+                        </div>
+                        <div class="user-text">
+                            <p class="font18 grey">{{item.snippet.description.slice(0, 100)}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

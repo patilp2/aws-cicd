@@ -1,0 +1,26 @@
+<div class="page-loader" *ngIf="loaderflag">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="txt">ArtNSkills</div>
+</div>
+<div id="wrapper" *ngIf="!loaderflag">
+  <div id="home">
+    <main id="main">
+      <section>
+        <app-slider [sliderData]="slider" *ngIf="dataFlag"></app-slider>
+        <div class="container-fluid fold-wrapper paddingTB4rem spotlight Row">
+          <app-spotlight [recevieData]="spdata" *ngIf="dataFlags"></app-spotlight>
+          <app-recent-uploaded [recentUpload]="recentUploadData" *ngIf="dataFlagRecent"></app-recent-uploaded>
+        </div>
+        <app-news></app-news>
+        <app-talk></app-talk>
+        <app-opportunities></app-opportunities>
+      </section>
+    </main>
+
+  </div>
+</div>

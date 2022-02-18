@@ -1,0 +1,55 @@
+<form action="/action_page.php">
+    <input type="text" [(ngModel)]="user_profile_id" name="user_profile_id">
+
+    <h5>Personal Information</h5>
+    <input type="file" (change)="fileChangeEvent($event)" />
+    <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1"
+        format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady()"
+        (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+    <img [src]="croppedImage" />
+    <div class="row">
+        <div class="col-md-3 form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" [(ngModel)]="first_name" placeholder="Enter First Name"
+                name="first_name">
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label for="middle_name">Middle Name</label>
+            <input type="text" class="form-control" [(ngModel)]="middle_name" placeholder="Enter Middle Name"
+                name="middle_name">
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" [(ngModel)]="last_name" placeholder="Enter Last Name"
+                name="last_name">
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" [(ngModel)]="username" name="username" readonly>
+        </div>
+    </div>
+    <div class="row mt-10">
+        <div class="col-md-3 form-group">
+            <label for="mobile">Mobile No.</label>
+            <input type="text" class="form-control" placeholder="Enter Mobile" name="mobile">
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" placeholder="Enter Email" name="email">
+        </div>
+
+        <div class="col-md-3 form-group">
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" value="M"> Male
+            <input type="radio" name="gender" value="F"> Female
+            <input type="radio" name="gender" value="O"> Other
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" (click)="profileUpdate()">Submit</button>
+</form>
+
